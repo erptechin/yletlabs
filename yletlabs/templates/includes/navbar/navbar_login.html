@@ -1,0 +1,14 @@
+{% if not only_static %}
+
+{% if user != 'Guest' %}
+<div class="hidden lg:flex lg:flex-1 lg:justify-end">
+    <a class="text-sm/6 font-semibold text-gray-900" href="/app"> {{ _("App") }} <span
+            aria-hidden="true">&rarr;</span></a>
+</div>
+{% else %}
+<div class="hidden lg:flex lg:flex-1 lg:justify-end">
+    <a class="text-sm/6 font-semibold text-gray-900" href="/login">{{ _("Login") }} <span
+            aria-hidden="true">&rarr;</span></a>
+</div>
+{% endif %}
+{% endif %}
