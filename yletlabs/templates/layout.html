@@ -30,9 +30,8 @@
     </script>
     <script type="text/javascript" src="https://cdn.crowdin.com/jipt/jipt.js"></script>
     {% endif %}
-        <script src="/assets/frappe/js/frappe.min.js"></script>
-        <!-- <link href="/assets/yletlabs/css/main.css" rel="stylesheet"> -->
-        <link href="./output.css" rel="stylesheet">
+    <script src="/assets/frappe/js/frappe.min.js"></script>
+    <link href="./output.css" rel="stylesheet">
 </head>
 
 <body frappe-session-status="{{ 'logged-in' if frappe.session.user != 'Guest' else 'logged-out'}}"
@@ -76,7 +75,7 @@
 
                 <div class="flex lg:hidden">
 
-                    <button type="button"
+                    <button type="button" onclick="openMenu()"
                         class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                         <span class="sr-only">Open main menu</span>
                         <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -98,7 +97,7 @@
 
             </nav>
 
-            <div class="lg:hidden" role="dialog" aria-modal="true">
+            <div id="right_panel" class="lg:hidden" style="display: none;">
                 <div class="fixed inset-0 z-10"></div>
                 <div
                     class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -110,7 +109,7 @@
                             <img class="h-8 w-auto" src="/assets/yletlabs/images/ylet.png" alt="">
                         </a>
 
-                        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <button type="button" onclick="closeMenu()" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                             <span class="sr-only">Close menu</span>
                             <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                 aria-hidden="true" data-slot="icon">
@@ -253,6 +252,14 @@
     </div>
 
     {% endblock %}
+    <script>
+        function openMenu() {
+            document.getElementById("right_panel").style.display = "block"
+        }
+        function closeMenu() {
+            document.getElementById("right_panel").style.display = "none"
+        }
+    </script>
 </body>
 
 </html>

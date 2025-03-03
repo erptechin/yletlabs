@@ -106,78 +106,18 @@
         <p class="mt-6 text-base/7 text-gray-600">Our Business Solutions are designed to streamline operations, enhance productivity, and drive digital transformation. We provide tailored software and technology-driven strategies to help businesses optimize their workflows, improve customer experiences, and achieve long-term success.</p>
       </div>
       <dl class="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
+        
+        {%- for row in services -%}
         <div class="relative pl-9">
           <dt class="font-semibold text-gray-900">
             <svg class="absolute top-1 left-0 size-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
               <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
             </svg>
-            Customer Relationship Management (CRM)
+            {{ row.title }}
           </dt>
-          <dd class="mt-2">Capture leads, nurture customer relationships, and streamline sales pipelines.</dd>
+          <dd class="mt-2">{{ row.description }}</dd>
         </div>
-        <div class="relative pl-9">
-          <dt class="font-semibold text-gray-900">
-            <svg class="absolute top-1 left-0 size-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-            </svg>
-            Sales & Purchase Management
-          </dt>
-          <dd class="mt-2">Automate sales orders, purchase invoices, and supplier interactions for smooth transactions.</dd>
-        </div>
-        <div class="relative pl-9">
-          <dt class="font-semibold text-gray-900">
-            <svg class="absolute top-1 left-0 size-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-            </svg>
-            Manufacturing
-          </dt>
-          <dd class="mt-2"> Plan production, track work orders, and manage raw materials with real-time insights.</dd>
-        </div>
-        <div class="relative pl-9">
-          <dt class="font-semibold text-gray-900">
-            <svg class="absolute top-1 left-0 size-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-            </svg>
-            Project Management 
-          </dt>
-          <dd class="mt-2">Organize tasks, collaborate on projects, and monitor progress for timely completion.</dd>
-        </div>
-        <div class="relative pl-9">
-          <dt class="font-semibold text-gray-900">
-            <svg class="absolute top-1 left-0 size-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-            </svg>
-            Inventory Management
-          </dt>
-          <dd class="mt-2">Track stock levels, manage warehouses, and optimize supply chain operations efficiently.</dd>
-        </div>
-        <div class="relative pl-9">
-          <dt class="font-semibold text-gray-900">
-            <svg class="absolute top-1 left-0 size-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-            </svg>
-            Accounting & Finance
-          </dt>
-          <dd class="mt-2">Manage invoices, payments, expenses, and financial reporting with automation and accuracy.</dd>
-        </div>
-        <div class="relative pl-9">
-          <dt class="font-semibold text-gray-900">
-            <svg class="absolute top-1 left-0 size-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-            </svg>
-            Subscriptions Management
-          </dt>
-          <dd class="mt-2">Automate recurring billing and manage subscriptions seamlessly.</dd>
-        </div>
-        <div class="relative pl-9">
-          <dt class="font-semibold text-gray-900">
-            <svg class="absolute top-1 left-0 size-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-            </svg>
-            Point of Sale (POS)
-          </dt>
-          <dd class="mt-2">Process retail transactions with a user-friendly POS system.</dd>
-        </div>
+        {%- endfor -%}
         
       </dl>
     </div>
